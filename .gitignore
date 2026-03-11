@@ -1,3 +1,4 @@
+# General
 node_modules/
 dist/
 build/
@@ -7,8 +8,23 @@ __pycache__/
 *.pyc
 *.log
 *.sqlite
+*.db
 .DS_Store
-geo-engine/backend/models/*.pkl
+
+# GeoEngine specific
+**/node_modules/
+**/venv/
+**/__pycache__/
+**/*.pkl
+**/*.sqlite
+**/*.db
+**/data/
+**/build/
+**/package-lock.json
+
+# Large data folders
+geo-engine/data/
 geo-engine/backend/data/
-geo-engine/backend/venv/
- geo-engine/frontend/node_modules/
+geo-engine/frontend/build/
+geo-engine/backend/models/*.pkl
+geo-engine/backend/cache/

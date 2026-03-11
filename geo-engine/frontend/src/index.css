@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Leaflet fixes inside Tailwind */
+.leaflet-container { z-index: 0; }
+.leaflet-control { z-index: 10 !important; }
+.leaflet-pane  { z-index: 0; }
+.leaflet-top, .leaflet-bottom { z-index: 10 !important; }
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* Geo pulse animation */
+@keyframes geo-pulse {
+  0%   { transform: scale(1);   opacity: 1; }
+  70%  { transform: scale(2.5); opacity: 0; }
+  100% { transform: scale(1);   opacity: 0; }
+}
+.geo-pulse-ring {
+  position: absolute; top: 0; left: 0;
+  width: 24px; height: 24px; border-radius: 50%;
+  background: rgba(37, 99, 235, 0.45);
+  animation: geo-pulse 1.8s ease-out infinite;
+}
+.geo-dot {
+  position: relative; width: 24px; height: 24px;
+  border-radius: 50%; background: #2563EB;
+  border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}

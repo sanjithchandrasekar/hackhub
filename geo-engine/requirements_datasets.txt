@@ -1,0 +1,19 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# requirements_datasets.txt
+# Dependencies for dataset download and preparation scripts
+# Install with:  pip install -r requirements_datasets.txt
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Kaggle API – dataset download
+kaggle>=1.6.14
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.25.0
+
+# Geospatial processing
+geopandas>=0.14.0
+shapely>=2.0.0
+
+# Optional: faster CSV reading (used by pandas automatically if installed)
+pyarrow>=14.0.0

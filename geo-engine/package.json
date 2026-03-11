@@ -1,0 +1,16 @@
+{
+  "name": "geo-engine",
+  "version": "2.0.0",
+  "description": "Intelligent Geospatial Engine - Full Stack Launcher",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail --prefix-colors \"bgBlue.bold,bgGreen.bold\" --prefix \"[{name}]\" --names \"BACKEND,FRONTEND\" \"npm run backend\" \"npm run frontend\"",
+    "start": "concurrently --kill-others-on-fail --prefix-colors \"bgBlue.bold,bgGreen.bold\" --prefix \"[{name}]\" --names \"BACKEND,FRONTEND\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "set PYTHONIOENCODING=utf-8 && cd backend && .\\venv\\Scripts\\python.exe main.py",
+    "frontend": "cd frontend && npm start",
+    "install:backend": "cd backend && .\\venv\\Scripts\\pip.exe install -r requirements.txt"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
